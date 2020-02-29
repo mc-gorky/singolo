@@ -1,28 +1,4 @@
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 .wrapper {
     position: relative;
@@ -33,8 +9,8 @@ time, mark, audio, video {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-left: 39px;
-    padding-top: 34px;
+    padding-left: 40px;
+    padding-top: 32px;
     padding-right: 39px;
     height: 95px;
     width: 100%;
@@ -56,11 +32,15 @@ time, mark, audio, video {
 }
 
 .navbar {
-    padding-top: 7px;
+    padding-top: 8px;
+}
+
+.navbar li:first-child {
+    color: #f06c64;
 }
 
 .navbar li:not(:last-child) {
-    margin-right: 12px;
+    margin-right: 13px;
   }
 
   .navbar li:not(:last-child):after{
@@ -153,19 +133,32 @@ time, mark, audio, video {
 .services-items-container{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 47px;
+    margin-top: 46px;
     padding-left: 11px;
 }
 
 .services-item {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
-    margin-bottom: 38px;
+    margin-bottom: 34px;
+}
+
+.services-item:nth-child(2),  .services-item:nth-child(5) {
+    padding-left: 2px;
+}
+
+.services-item:nth-child(3),  .services-item:nth-child(6) {
+    padding-left: 6px;
+}
+
+.services-item:nth-child(3) .services-item-header,  .services-item:nth-child(6) .services-item-header {
+    padding-left: 2px;
 }
 
 .services-item-image {
     display: inline-block;
     width: 60px;
+    padding-top: 1px;
 }
 
 .services-text {
@@ -185,9 +178,11 @@ time, mark, audio, video {
 
 .services-item-description {
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21px;
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
+    text-align: justify;
+    padding-right: 16px;
 }
 
