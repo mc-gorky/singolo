@@ -5,7 +5,7 @@
   } 
 
 .contact-section{
-    padding: 68px 20px 60px 40px;
+    padding: 68px 20px 67px 40px;
     background-color: #f06c64;
     border-bottom: 6px solid  #ea676b;
 }
@@ -28,14 +28,16 @@
 }
 
 .contact-form {
-    width: 640px;
+    display: inline-block;
+    vertical-align: top;
+    width: 635px;
     margin-top: 44px;
 }
 
 .contact-form-input {
     width: 619px;
     height: 38px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     border-radius: 5px;
     background-color: #d6564f;
     outline: none;
@@ -43,6 +45,7 @@
 }
 
 .contact-form-input::placeholder {
+    padding-left: 14px;
     font-size: 12px;
     line-height: 22px;
     color: #f48c8f;
@@ -52,19 +55,79 @@
 
 .contact-form-textarea {
     width: 619px;
-    height: 138px;
+    height: 202px;
     border-radius: 5px;
     background-color: #d6564f;
     outline: none;
     border: none;
 }
 
+.contact-form-textarea::placeholder {
+    padding-left: 13px;
+    padding-top: 5px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f48c8f;
+    font-family: "Lato";
+    font-weight: 400; 
+}
+
 
 .contact-information {
-    width: 320px;
+    display: inline-block;
+    width: 300px;
+    margin-top: 46px;
+    vertical-align: top;
+}
+
+.contact-information-header {
+    font-size: 18px;
+    line-height: 18px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 900;
+}
+
+.contact-information-description {
+    padding-left: 9px;
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+
+.contacts-icon {
+    width: 7px;
 }
 
 .footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-left: 41px;
+    padding-right: 40px;
     height: 76px;
     background-color: #2d303a;
+}
+
+.copyright {
+    padding-top: 4px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+
+.social-media-icon {
+    margin-left: 4px;
+}
+
+.social-media-icon:hover {
+    cursor: pointer;
 }
