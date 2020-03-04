@@ -5,7 +5,7 @@
   } 
 
 .contact-section{
-    padding: 68px 20px 67px 40px;
+    padding: 68px 20px 27px 40px;
     background-color: #f06c64;
     border-bottom: 6px solid  #ea676b;
 }
@@ -47,7 +47,7 @@
 .contact-form-input::placeholder {
     padding-left: 14px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 19px;
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400;
@@ -60,49 +60,110 @@
     background-color: #d6564f;
     outline: none;
     border: none;
+    resize: none;
 }
 
 .contact-form-textarea::placeholder {
     padding-left: 13px;
     padding-top: 5px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21px;
     color: #f48c8f;
     font-family: "Lato";
     font-weight: 400; 
+}
+
+.submit-button {
+    width: 100px;
+    margin-top: 16px;
+    background-color: #d6564f;
+    color: #f48c8f;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: "Lato";
+    font-weight: 400; 
+    font-size: 12px;
+    line-height: 22px;
+    cursor: pointer;
 }
 
 
 .contact-information {
     display: inline-block;
     width: 300px;
-    margin-top: 46px;
+    margin-top: 45px;
     vertical-align: top;
 }
 
 .contact-information-header {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 19px;
+    line-height: 17px;
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 900;
 }
 
 .contact-information-description {
-    padding-left: 9px;
     font-size: 12px;
     line-height: 22px;
     margin-bottom: 20px;
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 400;
-    margin-top: 7px;
+    margin-top: 10px;
 }
 
 
-.contacts-icon {
+.location-icon {
     width: 7px;
+    margin-top: 5px;
+    margin-left: 4px;
 }
+
+.phone-icon {
+    width: 11px;
+    margin-left: 2px;
+    margin-top: 4px;
+}
+
+.mail-icon {
+    width: 13px;
+    margin-left: 1px;
+    margin-top: 8px;
+}
+
+.location-lines-text{
+    margin-left: 9px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.phone-lines-text {
+    margin-left: 7px;
+    font-size: 12px;
+    line-height: 19px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.mail-lines-text {
+    margin-left: 6px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+.contact-lines:last-child {
+    margin-top: 1px;
+}
+
 
 .footer {
     display: flex;
@@ -126,8 +187,5 @@
 
 .social-media-icon {
     margin-left: 4px;
-}
-
-.social-media-icon:hover {
     cursor: pointer;
 }
