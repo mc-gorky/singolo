@@ -50,8 +50,8 @@ form {
 .header {
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-top: 32px;
+    padding-left: 39px;
+    padding-top: 29px;
     padding-right: 39px;
     height: 95px;
     width: 100%;
@@ -73,7 +73,7 @@ form {
 }
 
 .navbar {
-    padding-top: 8px;
+    padding-top: 10px;
 }
 
 .navbar li:first-child {
@@ -154,6 +154,7 @@ form {
 }
 
 .services-section {
+    margin-bottom: 5px;
     padding: 35px 30px; 
     height: 495px;
     background-color: #f2f2f2;
@@ -178,20 +179,21 @@ form {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
+    text-align: justify;
 }
 
 
 .services-items-container{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 46px;
+    margin-top: 45px;
     padding-left: 11px;
 }
 
 .services-item {
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
 }
 
 .services-item:nth-child(2),  .services-item:nth-child(5) {
@@ -235,6 +237,7 @@ form {
     font-weight: 400;
     text-align: justify;
     padding-right: 16px;
+    overflow: hidden;
 }
 
 .portfolio {
@@ -261,7 +264,7 @@ form {
 }
 
 .portfolio-tags {
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 .portfolio-tags-element:nth-child(3), .portfolio-tags-element:nth-child(4) {
@@ -315,13 +318,14 @@ form {
 }
 
 .team {
-    padding: 62px 20px 60px 40px;
+    padding: 57px 20px 67px 40px;
     background-color: #f2f2f2;
     border-bottom: 6px solid  #ffffff;
 }
 
 .team-header {
-    padding-left: 2px;
+    padding-top: 1px;
+    padding-left: 1px;
     font-size: 30px;
     color: #666d89;
     font-family: "Lato";
@@ -329,16 +333,18 @@ form {
 }
 
 .team-description {
-    margin-top: 21px;
+    margin-top: 20px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
     font-family: "Lato";
     font-weight: 300;
+    text-align: justify;
+    overflow: hidden;
 }
 
 .team-members-container {
-    margin-top: 45px;
+    margin-top: 44px;
     display: flex;
 }
 
@@ -362,6 +368,7 @@ form {
     color: #666d89;
     font-family: "Lato";
     font-weight: 900;
+    overflow: hidden;
 }
 
 .member-description {
@@ -371,6 +378,8 @@ form {
     color: #767e9e;
     font-family: "Lato";
     font-weight: 400;
+    text-align: justify;
+    overflow: hidden;
 }
 
 .social-media-icon {
@@ -386,7 +395,7 @@ form {
 }
 
 .contact-section{
-    padding: 68px 20px 27px 40px;
+    padding: 68px 20px 24px 40px;
     background-color: #f06c64;
     border-bottom: 6px solid  #ea676b;
 }
@@ -493,6 +502,7 @@ form {
     font-family: "Lato";
     font-weight: 400;
     margin-top: 10px;
+    text-align: justify;
 }
 
 
@@ -542,7 +552,7 @@ form {
 }
 
 .contact-lines:last-child {
-    margin-top: 1px;
+    margin-top: 3px;
 }
 
 
