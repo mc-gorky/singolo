@@ -19,8 +19,11 @@ const IMAGES = document.querySelector('.images-container');
 const IMAGES_ITEM = IMAGES.querySelectorAll('.portfolio-image');
 
 let selectTags = function() {PORTFOLIO_TAGS.querySelectorAll('p').forEach((elem) => {
-    elem.classList.remove('selected');
-    event.target.classList.add('selected');
+    if (event.target.classList.contains('portfolio-tags-element')){
+        elem.classList.remove('selected');
+        event.target.classList.add('selected');
+    }
+   
 })}
 
 let toggleImage = function() {
@@ -119,3 +122,54 @@ let submitForm = function(event) {
 
 FORM.addEventListener('submit', submitForm)
 CONFIRM_BUTTON.addEventListener('click', () => SUBMIT_WINDOW.style.display = 'none')
+
+//slider
+
+let items = document.querySelectorAll('.images-slider-item');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.left-arrow-element').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
+});
+
+document.querySelector('.right-arrow-element').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
+});
