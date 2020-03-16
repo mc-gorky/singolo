@@ -10,15 +10,15 @@
 
 <body>
   <section class="wrapper">
-    <header class='header'>
+    <header class='header' id="Home">
       <h1 class='project-label'>Singolo<span class='project-label-asterisk'>*</span></h1>
       <nav>
         <ul class='navbar'>
-          <li class='navbar-element'>Home</li>
-          <li class='navbar-element'>Services</li>
-          <li class='navbar-element'>Portfolio</li>
-          <li class='navbar-element'>About</li>
-          <li class='navbar-element'>Contact</li>
+          <li class='navbar-element'><a href="#Home"class='navbar-link selected'>Home</a></li>
+          <li class='navbar-element'><a href="#Services" class='navbar-link'>Services</a></li>
+          <li class='navbar-element'><a href="#Portfolio" class='navbar-link'>Portfolio</a></li>
+          <li class='navbar-element'><a href="#About" class='navbar-link'>About</a></li>
+          <li class='navbar-element'><a href="#Contact" class='navbar-link'>Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -26,10 +26,14 @@
       <section class='mobile-images-section'>
         <img class="left-arrow-element" src="assets/images/left-arrow.png" alt="left-arrow">
         <img class="right-arrow-element" src="assets/images/right-arrow.png" alt="right-arrow">
-        <img class="vertical-iphone-image" src="assets/images/iPhone Vertical.png" alt="iPhone-vertical">
-        <img class="horizontal-iphone-image" src="assets/images/iPhone Horizontal.png" alt="iPhone-horizontal">
+        <div class="images-slider">
+          <div class="vertical-iphone" id="vertical-iphone"></div>
+          <img class="vertical-iphone-image" src="assets/images/iPhone Vertical.png" alt="iPhone-vertical">
+          <div class="horizontal-iphone" id="horizontal-iphone"></div>
+          <img class="horizontal-iphone-image" src="assets/images/iPhone Horizontal.png" alt="iPhone-horizontal">
+        </div>
       </section>
-      <section class="services-section">
+      <section class="services-section" id="Services">
         <h3 class="services-section-header">Our Services</h3>
         <p class="services-section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="services-items-container">
@@ -77,14 +81,14 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="Portfolio">
         <h2 class="portfolio-header">Portfolio</h2>
         <p class="portfolio-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <div class="portfolio-tags">
-          <p class="portfolio-tags-element">All</p>
-          <p class="portfolio-tags-element">Web Design</p>
-          <p class="portfolio-tags-element">Graphic Design</p>
-          <p class="portfolio-tags-element">Artwork</p>
+          <p class="portfolio-tags-element selected" id='All'>All</p>
+          <p class="portfolio-tags-element"  id='Web'>Web Design</p>
+          <p class="portfolio-tags-element" id='Graphic'>Graphic Design</p>
+          <p class="portfolio-tags-element" id='Artwork'>Artwork</p>
         </div>
         <div class="images-container">
           <img src="assets/images/portfolio/1.png" class="portfolio-image" alt="1">
@@ -101,7 +105,7 @@
           <img src="assets/images/portfolio/12.png" class="portfolio-image" alt="12">
         </div>
       </section>
-      <section class="team">
+      <section class="team" id="About">
         <h2 class="team-header">About Us</h2>
         <p class="team-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <div class="team-members-container">
@@ -140,7 +144,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-section">
+      <section class="contact-section" id="Contact">
         <h2 class="contact-section-header">Get a Quote</h2>
         <p class="contact-section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
         <form class="contact-form" action="#" method="post">
@@ -166,7 +170,13 @@
             <a class="mail-lines-text" href="mailto:info@singolo.com">info@singolo.com</a>
           </div>
         </div>
-      </section>
+        <div id='submit-window'>
+          <h4 id='submit-header'>Письмо отправлено </h4>
+          <p id='subj'></p>
+          <p id='describ'></p>
+          <button id='confirm-button'>OK</button>
+        </div>
+      </section>    
     </main>
     <footer class="footer"> 
       <p class="copyright">© Copyright 2013</p>
@@ -178,6 +188,7 @@
       </div>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 
 </html>
