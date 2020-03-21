@@ -58,17 +58,20 @@ form {
     width: 1020px;
   } 
 
-.header {
+.header-section {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     padding-left: 39px;
     padding-top: 29px;
     padding-right: 39px;
     height: 95px;
-    width: 100%;
+    width: 1020px;
     border-bottom: 6px solid #323746;
     background-color: #2d303a;
+    z-index: 2;
 }
+
 
 .project-label {
     text-transform: uppercase;
@@ -160,6 +163,7 @@ form {
 
 .images-slider {
     position: relative;
+    margin-top: 95px;
     height: 600px;
     width: 100%;
     overflow: hidden;

@@ -12,19 +12,51 @@ let selectNavbar = function() {
 
 NAVBAR.addEventListener('click', selectNavbar)
 
+function scrollMenu() {
+    const position = window.scrollY;
+    const sections = document.querySelectorAll('section');
+    const links =  NAVBAR.querySelectorAll('a');
+
+    sections.forEach((elem) => {
+        if (elem.offsetTop - 60 <= position && (elem.offsetTop + elem.offsetHeight - 60) > position) {
+            links.forEach((link) => {
+                link.classList.remove('selected');
+                if (elem.getAttribute('id') === link.getAttribute('href').substring(1)) {
+                    link.classList.add('selected')
+                }
+            }) 
+        }
+    })
+} 
+
+document.addEventListener('scroll', scrollMenu)
+
 // Tags menu
 
 const PORTFOLIO_TAGS = document.querySelector('.portfolio-tags');
 const IMAGES = document.querySelector('.images-container');
 const IMAGES_ITEM = IMAGES.querySelectorAll('.portfolio-image');
 
+let mixImages = function() {
+
+    if (event.target.classList.contains('portfolio-tags-element') && !event.target.classList.contains('selected')){
+    IMAGES.appendChild(document.getElementsByClassName('portfolio-image')[0]);
+    }
+}
+
+PORTFOLIO_TAGS.addEventListener('click', mixImages)
+
+
 let selectTags = function() {PORTFOLIO_TAGS.querySelectorAll('p').forEach((elem) => {
     if (event.target.classList.contains('portfolio-tags-element')){
         elem.classList.remove('selected');
         event.target.classList.add('selected');
+        
     }
    
 })}
+
+PORTFOLIO_TAGS.addEventListener('click', selectTags)
 
 let toggleImage = function() {
     IMAGES_ITEM.forEach((elem) => {
@@ -40,38 +72,12 @@ let toggleImage = function() {
     });
 }
 
-let mixImages = function() {
-    const all = document.getElementById('All');
-    const web = document.getElementById('Web');
-    const graphic = document.getElementById('Graphic');
-    const artwork = document.getElementById('Artwork');
-    if (event.target === all) {
-        IMAGES_ITEM.forEach(elem => elem.style.order = '');
-    }
-    if(event.target === web){
-        IMAGES_ITEM[0].style.order = 1;
-        IMAGES_ITEM[4].style.order = 2;
-        IMAGES_ITEM[8].style.order = 3;
-        IMAGES_ITEM[9].style.order = 4;
-    }
-    if(event.target === graphic){
-        IMAGES_ITEM[0].style.order = 3;
-        IMAGES_ITEM[1].style.order = 1;
-        IMAGES_ITEM[8].style.order = 2;
-        IMAGES_ITEM[9].style.order = 2;
-    }
-    if(event.target === artwork){
-        IMAGES_ITEM[2].style.order = 3;
-        IMAGES_ITEM[5].style.order = 2;
-        IMAGES_ITEM[7].style.order = 1;
-        IMAGES_ITEM[9].style.order = 1;
-    }
-}
-
-
-PORTFOLIO_TAGS.addEventListener('click', selectTags)
-PORTFOLIO_TAGS.addEventListener('click', mixImages)
 IMAGES.addEventListener('click', toggleImage)
+
+
+
+
+
 
 
 //Phone screen switcher
