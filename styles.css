@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+body, html {
+    scroll-behavior: smooth;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -49,6 +53,7 @@ form {
 
 .wrapper {
     position: relative;
+    margin: auto;
     overflow: hidden;
     width: 1020px;
   } 

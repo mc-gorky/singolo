@@ -117,11 +117,16 @@ let submitForm = function(event) {
         describeField.textContent = 'Описание: ' + description;
     }
 
-    SUBMIT_WINDOW.style.display = 'block';  
+    SUBMIT_WINDOW.style.display = 'block';
+   
 }
 
 FORM.addEventListener('submit', submitForm)
-CONFIRM_BUTTON.addEventListener('click', () => SUBMIT_WINDOW.style.display = 'none')
+CONFIRM_BUTTON.addEventListener('click', () => {
+    SUBMIT_WINDOW.style.display = 'none'
+    FORM.querySelectorAll('input').forEach((elem) => elem.value  = '');
+    FORM.querySelector('.contact-form-textarea').value = '';
+})
 
 //slider
 
