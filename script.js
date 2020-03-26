@@ -184,3 +184,18 @@ document.querySelector('.right-arrow-element').addEventListener('click', functio
 		nextItem(currentItem);
 	}
 });
+
+//burger-menu
+
+const burgerButton = document.querySelector('.burger-button');
+const burgerIcon = document.querySelector('.burger-button-icon');
+const navbar = document.querySelector('.navbar');
+
+burgerButton.addEventListener('click', () => {
+    burgerIcon.classList.toggle('selected');
+    navbar.classList.toggle('mobile-display-none');
+});
+
+
+    
+    
