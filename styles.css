@@ -493,7 +493,7 @@ form {
 }
 
 .team-member-block{
-    max-width: 300px;
+    width: 33.33333%;
     margin-right: 19px;
 }
 
@@ -784,10 +784,10 @@ form {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1019px) {
 
     .wrapper {
-        width: 768px;
+        width: 100%;
     }
 
     .header-section {
@@ -811,8 +811,8 @@ form {
     .vertical-iphone-image {
         width: 180px;
         padding-bottom: 47px;
-        margin-left: 64px;
-        margin-top: 40px;
+        margin-left: 8%;
+        margin-top: 5%;  
     }
 
     .horizontal-iphone {
@@ -824,8 +824,8 @@ form {
 
     .horizontal-iphone-image {
         width: 364px;
-        margin-top: 133px;
-        margin-left: 54px;
+        margin-top: 17%;
+        margin-left: 7%;
     }
 
     .horizontal-iphone:after {
@@ -843,6 +843,15 @@ form {
     .right-arrow-element {
         top: 170px;
         right: 2px;
+    }
+
+    .slider-slide2 {
+        max-height: 442px;
+    }
+
+    .services-items-container {
+        margin-top: 25px;
+        padding-left: 0;
     }
 
     .services-item {
@@ -882,18 +891,20 @@ form {
     }
 
     .contact-information {
-        width: 30%;
+        width: 35%;
         margin-left: 39px;
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 767px) {
 
     .wrapper {
-        width: 375px;
+        width: 100%;
     }
 
+
     .header-section {
+        width: 100%;
         padding: 0;
         justify-content: center;
         height: 73px
@@ -945,16 +956,6 @@ form {
         }
       }
 
-      @keyframes navbarclose {
-        0% {
-          left: 0;
-        }
-      
-        100% {
-            left: -278px;
-        }
-      }
-
     .navbar-link {
         display: block;
         font-weight: bold;
@@ -983,8 +984,8 @@ form {
     .vertical-iphone-image {
         width: 88px;
         padding-bottom: 22px;
-        margin-left: 41px;
-        margin-top: 20px;
+        margin-left: 11%;
+        margin-top: 5%;
     }
 
     .horizontal-iphone {
@@ -996,8 +997,8 @@ form {
 
     .horizontal-iphone-image {
         width: 177px;
-        margin-top: 65px;
-        margin-left: 26px;
+        margin-top: 17%;
+        margin-left: 7%;
     }
 
     .horizontal-iphone:after {
@@ -1018,6 +1019,14 @@ form {
         top: 74px;
         right: 3px;
     }
+
+    .slider-slide2 {
+        max-height: 208px;
+    }
+
+    .services-section {
+        padding: 35px 32px 15px;
+    }
     
     .services-items-container {
         flex-direction: column;
@@ -1025,10 +1034,20 @@ form {
     
     .services-item {
         max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .images-container {
+        max-height: 525px;
+    }
+
+    .portfolio {
+        padding: 42px 30px;
     }
 
     .portfolio-image {
         max-width: calc(50% - 12px);
+        margin: 0 3px 4px;
     }
 
     .team {
@@ -1037,6 +1056,7 @@ form {
 
     .team-members-container {
         flex-direction: column;
+        margin-top: 14px;
     }
 
     .team-member-block {
@@ -1044,8 +1064,13 @@ form {
         padding-bottom: 34px;
     }
 
+    .contact-section {
+        padding: 44px 30px 36px;
+    }
+
     .contact-form {
         width: 100%;
+        margin-top: 19px;
     }
 
     .submit-button {
@@ -1055,6 +1080,7 @@ form {
     .contact-information {
         width: 100%;
         margin-left: 0;
+        margin-top: 32px;
     }
 
     .footer {
@@ -1064,5 +1090,12 @@ form {
 
     .copyright {
         display: none;
+    }
+}
+
+@media(max-width: 375px)  {
+    .horizontal-iphone-image {
+        margin-left: 0;
+
     }
 }
